@@ -1,0 +1,115 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*=====================
+    Body and Layout
+=======================*/
+body{
+    font-family: Arial, sans-serif;
+    margin: 10px auto;
+    padding: 0;
+    width: fit-content;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+    border: 3px dashed #ccc;    
+}
+/*==========================
+    header, main, footer
+============================*/
+header, main, footer {
+    margin: 10px;
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+header:hover, main:hover, footer:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 5px rgba(38, 38, 38, 0.2);
+}
+/*=============
+    header
+===============*/
+header, footer {
+    background-color: #d7d7d7;
+    color: rgb(22, 22, 22);
+    padding: 10px;
+    text-align: center;
+}
+/*======================
+    main and sections
+========================*/
+main {
+    background-color: #ffffff;
+    color: rgb(22, 22, 22);
+    padding: 10px;
+    height: 400px;
+}
+#controls, #color-scheme, #color-scheme-hex {
+    display: flex;
+    flex-direction: row;
+}
+#controls {
+    height: 20%;
+    padding: 10px;
+    cursor: pointer;
+}
+#color-scheme{
+    height: 70%;
+}
+#color-scheme-hex{
+    height: 10%;
+}
+#controls, #color-scheme, #color-scheme-hex {
+}
+/*======================
+main > section - 1
+========================*/
+#generate-btn, .color-options, #color-picker{
+    border: 2px solid #6d6d6d;
+}
+#controls {
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+}
+.color-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#color-picker{
+    position: relative;
+    height: 80%;
+    border-radius: 50%;
+} 
+#generate-btn{}
+/*======================
+    main > section - 2
+========================*/
+#color-scheme, #color-scheme-hex {
+    border: 1px solid #ccc;
+}
+#color-card{
+    flex: 1;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*======================
+    main > section - 3
+========================*/
+#hex-code{
+    flex: 1;
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
+    /* border: 1px solid #ccc; */
+    cursor: pointer;
+}
+/*==============
+    footer
+================*/
+footer {
+    font-size: 0.9em;
+}

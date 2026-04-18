@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Scheme Generator</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+        <div class="header-content">
+            <h1>Color Scheme Generator</h1>
+        </div>
+    </header>
+
+    <main>
+      <section id="controls">
+        <input type="color" id="color-picker" value="#bcbcbc" />
+        <div class="color-options">
+            <label for="colors">Choose a color scheme:</label>
+            <select id="colors" name="colors">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome Dark</option>
+                <option value="monochrome-light">Monochrome Light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic Complement</option>
+                <option value="triad">Triad</option>
+                <option value="quad">Quad</option>
+            </select>
+        </div>
+        <button id="generate-btn">Generate color scheme</button>
+      </section>
+      
+      <section id="color-scheme">
+      </section>
+      
+      <section id="color-scheme-hex">
+        
+      </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Color Scheme Generator. All rights reserved.</p>
+            <p>Created by "Fakhar Alam" | Powered by <a href="https://www.thecolorapi.com" target="_blank">The Color Picker API</a></p>
+        </div>
+    </footer>
+
+    <script src="index.js" defer></script>
+  </body>
+</html>

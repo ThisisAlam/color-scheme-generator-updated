@@ -62,6 +62,7 @@ This tool allows users to generate beautiful color palettes based on different c
 
 ## 📁 Project Structure
 
+```bash
 color-scheme-generator/
 │
 ├── index.html
@@ -79,6 +80,7 @@ color-scheme-generator/
 │
 └── screen-recording/
     └── screen-recording.mp4
+```
 
 ---
 

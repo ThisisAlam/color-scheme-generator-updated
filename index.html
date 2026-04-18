@@ -15,7 +15,9 @@
 
     <main>
       <section id="controls">
-        <input type="color" id="color-picker" value="#bcbcbc" />
+        <div class="color-picker-container">
+            <input type="color" id="color-picker" value="#bcbcbc" />
+        </div>
         <div class="color-options">
             <label for="colors">Choose a color scheme:</label>
             <select id="colors" name="colors">
@@ -28,7 +30,7 @@
                 <option value="quad">Quad</option>
             </select>
         </div>
-        <button id="generate-btn">Generate color scheme</button>
+        <button id="generate-btn">Generate</button>
       </section>
       
       <section id="color-scheme">

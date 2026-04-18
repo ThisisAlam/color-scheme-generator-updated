@@ -21,11 +21,6 @@ header, main, footer {
     width: 450px;
     height: auto;
     border-radius: 10px;
-    transition: all 0.3s ease;
-}
-header:hover, main:hover, footer:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 5px rgba(38, 38, 38, 0.2);
 }
 /*=============
     header
@@ -50,69 +45,107 @@ main {
     flex-direction: row;
 }
 #controls {
-    height: 20%;
+    height: 22%;
     padding: 10px;
     cursor: pointer;
 }
 #color-scheme{
-    height: 70%;
+    margin-top: 10px;
+    height: 68%;
 }
 #color-scheme-hex{
     height: 10%;
 }
-#controls, #color-scheme, #color-scheme-hex {
-}
 /*======================
 main > section - 1
 ========================*/
-#generate-btn, .color-options, #color-picker{
-    border: 2px solid #6d6d6d;
-}
+
 #controls {
     align-items: center;
-    justify-content: space-between;
-    border: 1px solid #ccc;
+    justify-content: space-around;
+    border-bottom: 2px solid #ccc;
 }
 .color-options {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 5px;
+}
+.color-picker-container {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+.color-picker-container:hover {
+    transform: scale(1.1);
 }
 #color-picker{
-    position: relative;
-    height: 80%;
-    border-radius: 50%;
-    margin: 0;
-    border: none;
-    padding: 0;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    
 } 
-#generate-btn{}
+select#colors{
+    width: 180px;
+    padding: 5px;
+    border-radius: 10px;
+}
+#generate-btn{
+    width: 25%;
+    height: auto;
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+}
+#generate-btn:hover {
+  background: #555;
+}
+
 /*======================
     main > section - 2
 ========================*/
-#color-scheme, #color-scheme-hex {
-    border: 1px solid #ccc;
-}
 .color-card{
     flex: 1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.color-card:hover {
+    transform: scale(1.05);
+}
+.hex-code{
+    flex: 1;
+    margin: auto;
+    text-align: center;
+    font-size: 13px;
     border-radius: 5px;
     cursor: pointer;
 }
 /*======================
     main > section - 3
 ========================*/
-.hex-code{
-    flex: 1;
-    margin: auto;
-    text-align: center;
-    font-size: 12px;
-    border-radius: 5px;
-    /* border: 1px solid #ccc; */
-    cursor: pointer;
-}
 /*==============
     footer
 ================*/
 footer {
     font-size: 0.9em;
+}
+footer p {
+    margin: 5px 0;
+}
+footer a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
 }

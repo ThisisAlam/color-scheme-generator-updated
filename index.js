@@ -19,6 +19,7 @@ function rendercolors(colorArr){
     })
     colorScheme.innerHTML = html1;
     colorHex.innerHTML = html2;
+    
 }
 
 function schemeHandler(scheme, colorValuesArr){
@@ -47,6 +48,9 @@ function schemeHandler(scheme, colorValuesArr){
         console.log('Invalid scheme selected');
     } 
 }
+
+
+
 function fetchColors(color, scheme){
     fetch(`https://www.thecolorapi.com/scheme?hex=${color}&mode=${scheme}&count=6`)
         .then(response => response.json())
@@ -66,12 +70,33 @@ function fetchColors(color, scheme){
             rendercolors(schemeResult);
         })
 }
+
+/* Default fetch */
 let color = colorPicker.value.slice(1);
 let scheme = schemeSelect.value;
 fetchColors(color, scheme)
+
+/* Event listener for generate button */
 generateBtn.addEventListener('click', async (e) => {
     e.preventDefault();
     let color = colorPicker.value.slice(1);
     let scheme = schemeSelect.value;
     fetchColors(color, scheme)
+    
 });
+
+const colorCards = document.querySelectorAll('.color-card');
+colorCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const hexCode = card.nextElementSibling.textContent;
+        navigator.clipboard.writeText(hexCode)
+            .then(() => {
+                alert(`Hex code ${hexCode} copied to clipboard!`);
+            })
+            .catch(err => {
+                console.error('Failed to copy hex code: ', err);
+            }
+        );
+    });
+});
+    

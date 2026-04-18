@@ -82,6 +82,9 @@ main > section - 1
     position: relative;
     height: 80%;
     border-radius: 50%;
+    margin: 0;
+    border: none;
+    padding: 0;
 } 
 #generate-btn{}
 /*======================
@@ -90,7 +93,7 @@ main > section - 1
 #color-scheme, #color-scheme-hex {
     border: 1px solid #ccc;
 }
-#color-card{
+.color-card{
     flex: 1;
     border-radius: 5px;
     cursor: pointer;
@@ -98,7 +101,7 @@ main > section - 1
 /*======================
     main > section - 3
 ========================*/
-#hex-code{
+.hex-code{
     flex: 1;
     margin: auto;
     text-align: center;

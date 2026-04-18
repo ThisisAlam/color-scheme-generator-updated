@@ -85,18 +85,3 @@ generateBtn.addEventListener('click', async (e) => {
     
 });
 
-const colorCards = document.querySelectorAll('.color-card');
-colorCards.forEach(card => {
-    card.addEventListener('click', () => {
-        const hexCode = card.nextElementSibling.textContent;
-        navigator.clipboard.writeText(hexCode)
-            .then(() => {
-                alert(`Hex code ${hexCode} copied to clipboard!`);
-            })
-            .catch(err => {
-                console.error('Failed to copy hex code: ', err);
-            }
-        );
-    });
-});
-    

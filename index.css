@@ -6,12 +6,12 @@
 =======================*/
 body{
     font-family: Arial, sans-serif;
-    margin: 10px auto;
+    margin: 30px auto;
     padding: 0;
     width: fit-content;
     border-radius: 15px;
     background-color: #f0f0f0;
-    border: 3px dashed #ccc;    
+    border: 4px dashed #ccc;    
 }
 /*==========================
     header, main, footer
@@ -21,12 +21,13 @@ header, main, footer {
     width: 450px;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
 }
 /*=============
     header
 ===============*/
 header, footer {
-    background-color: #d7d7d7;
+    background-color: #ffffff;
     color: rgb(22, 22, 22);
     padding: 10px;
     text-align: center;
@@ -88,19 +89,22 @@ main > section - 1
 }
 #color-picker{
     position: absolute;
-    height: 100px;
-    width: 100px;
-    
+    height: 60px;
+    width: 60px;
+    border: none;
+    margin: none;
 } 
 select#colors{
     width: 180px;
-    padding: 5px;
+    padding: 10px;
+    /* font-size: 14px; */
     border-radius: 10px;
 }
 #generate-btn{
     width: 25%;
     height: auto;
     padding: 15px;
+    font-size: 14px;
     background: #333;
     color: #fff;
     border: none;
@@ -119,10 +123,11 @@ select#colors{
     flex: 1;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
 }
 .color-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 .hex-code{
     flex: 1;
